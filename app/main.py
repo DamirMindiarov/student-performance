@@ -30,9 +30,7 @@ class CustomArgumentParser(argparse.ArgumentParser):
 def main():
     """Главная функция, запускающая обработку данных и вывод отчета."""
     parser = CustomArgumentParser(description="Анализ успеваемости студентов")
-    parser.add_argument(
-        "--files", nargs="+", required=True, help="Пути к CSV файлам"
-    )
+    parser.add_argument("--files", nargs="+", required=True, help="Пути к CSV файлам")
     parser.add_argument(
         "--report",
         required=True,

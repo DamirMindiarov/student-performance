@@ -65,9 +65,7 @@ class Report(ABC):
 class StudentPerformance(Report):
     def __init__(self, data_files: list[dict[str, str]]):
         """Отчет с информацией о среднем балле каждого студента."""
-        super().__init__(
-            headers=["student_name", "grade"], data_files=data_files
-        )
+        super().__init__(headers=["student_name", "grade"], data_files=data_files)
 
     def create_report_data(self) -> list[list]:
         """Создает список данных для отчета: имя студента и средний балл."""
